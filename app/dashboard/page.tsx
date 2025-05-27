@@ -40,16 +40,15 @@ export default async function Dashboard() {
         />
       </main>
 
-      <footer className="bg-blue-900 py-4 md:py-6 text-white">
+      <footer className="bg-default-50 border-t border-default-200 py-6">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
               <CloudUpload className="h-5 w-5 text-primary" />
-              <h2 className="text-lg font-bold">Dropbox</h2>
-              <h2>hello world</h2>
+              <h2 className="text-lg font-bold">Droply</h2>
             </div>
-            <p className="text-gray-300 text-sm">
-              &copy; {new Date().getFullYear()} Dropbox
+            <p className="text-default-500 text-sm">
+              &copy; {new Date().getFullYear()} Droply
             </p>
           </div>
         </div>

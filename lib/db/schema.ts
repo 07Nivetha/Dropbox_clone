@@ -1,8 +1,9 @@
 import {pgTable, text, uuid, integer, boolean,timestamp} from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
+import { InferModel } from "drizzle-orm";
 
 
-export const files = pgTable("files", {
+export const files = pgTable ("files", {
     id: uuid("id").defaultRandom().primaryKey(),
 
     //basic file/folder information
@@ -12,7 +13,7 @@ export const files = pgTable("files", {
     type: text("type").notNull(),//"folder"
 
     //storage information
-    fileUrl: text("file_url"), //url to access a file 
+    fileUrl: text("file_url").notNull(), //url to access a file 
     thumbnailUrl: text("thumbnail_url"),
 
     //ownership
@@ -46,3 +47,4 @@ export const fileRelations = relations(files, ({one,many}) => ({
 
 export const File = typeof files.$inferSelect;
 export const NewFile = typeof files.$inferInsert;
+export type File = InferModel <typeof files>;

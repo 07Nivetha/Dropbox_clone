@@ -270,6 +270,10 @@ export default function FileList({
         URL.revokeObjectURL(blobUrl);
       } else {
         // For other file types, use the fileUrl directly
+        if (!file.fileUrl) {
+        console.error("Cannot download file. fileUrl is null.");
+        return;
+        }
         const response = await fetch(file.fileUrl);
         if (!response.ok) {
           throw new Error(`Failed to download file: ${response.statusText}`);

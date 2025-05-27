@@ -2,14 +2,14 @@
 
 import { Star, Trash, X, ArrowUpFromLine, Download } from "lucide-react";
 import { Button } from "@heroui/button";
-import type { File as FileType } from "@/lib/db/schema";
+import type { File } from "@/lib/db/schema";
 
 interface FileActionsProps {
-  file: FileType;
+  file: File;
   onStar: (id: string) => void;
   onTrash: (id: string) => void;
-  onDelete: (file: FileType) => void;
-  onDownload: (file: FileType) => void;
+  onDelete: (file: File) => void;
+  onDownload: (file: File) => void;
 }
 
 export default function FileActions({
