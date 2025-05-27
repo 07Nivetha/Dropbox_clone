@@ -46,6 +46,7 @@ export default async function Dashboard() {
             <div className="flex items-center gap-2 mb-4 md:mb-0">
               <CloudUpload className="h-5 w-5 text-primary" />
               <h2 className="text-lg font-bold">Dropbox</h2>
+              <h2>hello world</h2>
             </div>
             <p className="text-gray-300 text-sm">
               &copy; {new Date().getFullYear()} Dropbox
